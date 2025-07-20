@@ -8,10 +8,11 @@ void Graph::addEdge(int v, int w) {
 }
 
 void Graph::printGraph() {
+    const std::string storeNames[] = {"Pusat", "Mall", "PIK", "KG", "Bekasi"};
     for (int v = 0; v < V; ++v) {
-        std::cout << "Vertex " << v << ":";
+        std::cout << "Toko " << v << " (" << storeNames[v] << "):";
         for (auto x : adj[v])
-            std::cout << " -> " << x;
+            std::cout << " -> " << storeNames[x] << "(" << x << ")";
         std::cout << std::endl;
     }
 }
